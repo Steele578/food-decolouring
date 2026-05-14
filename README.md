@@ -1,15 +1,10 @@
 # Food Coloring
-A plugin that recolors cooked Sailing and Hunter foods to have a bit more (colorful) soul to them!
+A plugin that recolours cooked Sailing and Hunter foods to have a bit less (colourful) soul to them!
 
 ## Features
-* Recolors all cooked Hunter meats!
-* Recolors all cooked Sailing fish! (except squids)
-* Redesigns Sunlight and Moonlight Moth Mixes!
-* Alternative color options for cooked Halibut!<br> (Light, Brown, Green, and Halibwan)
+* Recolours all cooked Hunter meats!
+* Recolours all cooked Sailing fish! (except squids)
 * Each individual item can be toggled in the config options!
-
-## Before and After
-![beforeafter.png](img%2Fbeforeafter.png)
 
 ### Known Issues
 
