@@ -1,4 +1,4 @@
-package com.foodcoloring;
+package com.food_decoloring;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -24,7 +24,7 @@ import net.runelite.client.ui.overlay.WidgetItemOverlay;
 import net.runelite.client.ui.overlay.components.TextComponent;
 
 @Slf4j
-public class FoodColoringOverlay extends WidgetItemOverlay
+public class FoodDeColoringOverlay extends WidgetItemOverlay
 {
 	// in-game alpha for placeholder is 120/255, however, overlays are on top of in-game renders, so we dim it further
 	static final float PLACEHOLDER_ALPHA = 0.18f;
@@ -36,10 +36,10 @@ public class FoodColoringOverlay extends WidgetItemOverlay
 	final Map<String, Image> images = new HashMap<>();
 
 	@Inject
-	private FoodColoringConfig config;
+	private FoodDeColoringConfig config;
 
 	@Inject
-	private FoodColoringOverlay()
+	private FoodDeColoringOverlay()
 	{
 		this.setPriority(OVERLAY_PRIORITY);
 		this.showOnInventory();
@@ -104,7 +104,7 @@ public class FoodColoringOverlay extends WidgetItemOverlay
 				shouldRenderItemOverlay(config.recolorPyreFox(), itemId, ItemID.FENNECFOX_COOKED) ||
 				shouldRenderItemOverlay(config.recolorSunlightAntelope(), itemId, ItemID.ANTELOPESUN_COOKED) ||
 				shouldRenderItemOverlay(config.recolorDashingKebbit(), itemId, ItemID.DASHINGKEBBIT_COOKED) ||
-				shouldRenderItemOverlay(config.recolorMoonlightAntelope(), itemId, ItemID.ANTELOPEMOON_COOKED) ||
+				shouldRenderItemOverlay(config.recolorMoonlightAntelope(), itemId, ItemID.ANTELOPEMOON_COOKED))
 		{
 			renderCorrectItemOverlay(graphics, itemId, widgetItem);
 
@@ -183,9 +183,10 @@ public class FoodColoringOverlay extends WidgetItemOverlay
 
 	private Image getReplacementIcon(final int id)
 	{
+		String key = Integer.toString(id);
 		if (!this.images.containsKey(key))
 		{
-			final URL resourceUrl = FoodColoringPlugin.class.getClassLoader().getResource(key + ".png");
+			final URL resourceUrl = FoodDeColoringPlugin.class.getClassLoader().getResource(key + ".png");
 			if (resourceUrl == null)
 			{
 				return null;

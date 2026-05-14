@@ -1,14 +1,14 @@
-package com.foodcoloring;
+package com.food_decoloring;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.ConfigSection;
 
-@ConfigGroup(FoodColoringConfig.GROUP)
-public interface FoodColoringConfig extends Config
+@ConfigGroup(FoodDeColoringConfig.GROUP)
+public interface FoodDeColoringConfig extends Config
 {
-	String GROUP = "foodcoloring";
+	String GROUP = "fooddecoloring";
 
 	@ConfigSection(
 		name = "Fish",
@@ -145,18 +145,7 @@ public interface FoodColoringConfig extends Config
 		return true;
 	}*/
 
-/*	@ConfigItem(
-			position = 9,
-			keyName = "recolorHalibut",
-			name = "Halibut",
-			description = "Recoloring of cooked halibut, with multiple choices.",
-			section = fishSection
-	)
-	default HalibutType recolorHalibut()
-	{
-		return HalibutType.LIGHT;
-	}
-*/
+
 	
 	//=== Hunter Meats Section ===
 

@@ -1,4 +1,4 @@
-package com.foodcoloring;
+package com.food_decoloring;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;
@@ -13,35 +13,35 @@ import net.runelite.client.ui.overlay.OverlayManager;
 @PluginDescriptor(
 	name = "Food Coloring"
 )
-public class FoodColoringPlugin extends Plugin
+public class FoodDeColoringPlugin extends Plugin
 {
 	@Inject
 	private OverlayManager overlayManager;
 
 	@Inject
-	private FoodColoringOverlay foodColoringOverlay;
+	private FoodDeColoringOverlay foodDeColoringOverlay;
 
 	@Inject
 	private Client client;
 
 	@Inject
-	private FoodColoringConfig config;
+	private FoodDeColoringConfig config;
 
 	@Override
 	protected void startUp() throws Exception
 	{
-		overlayManager.add(foodColoringOverlay);
+		overlayManager.add(foodDeColoringOverlay);
 	}
 
 	@Override
 	protected void shutDown() throws Exception
 	{
-		overlayManager.remove(foodColoringOverlay);
+		overlayManager.remove(foodDeColoringOverlay);
 	}
 
 	@Provides
-	FoodColoringConfig provideConfig(ConfigManager configManager)
+	FoodDeColoringConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(FoodColoringConfig.class);
+		return configManager.getConfig(FoodDeColoringConfig.class);
 	}
 }
